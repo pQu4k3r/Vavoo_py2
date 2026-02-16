@@ -23,6 +23,7 @@
 #########################################################
 """
 
+import socket
 import base64
 import ssl
 import types
@@ -71,7 +72,6 @@ else:
     ssl_context = None
     unichr_func = chr
 
-import socket
 
 try:
     TimeoutError
@@ -106,7 +106,7 @@ def trace_error():
         f.write(error_text)
         f.close()
 
-    except:
+    except BaseException:
         pass
 
 
@@ -489,7 +489,7 @@ def get_proxy_channels(country_name):
 
     for attempt in range(max_retries):
         try:
-            print("[vUtils] Getting channels for '" + str(country_name) + \
+            print("[vUtils] Getting channels for '" + str(country_name) +
                   "' (attempt " + str(attempt + 1) + "/" + str(max_retries) + ")")
 
             # URL-encode
@@ -588,6 +588,7 @@ def get_proxy_status():
         return None
     return None
 
+
 def is_proxy_running():
     """Check if the proxy is running (Py2 & Py3 compatible)"""
     import socket
@@ -599,6 +600,7 @@ def is_proxy_running():
         return result
     except Exception:
         return False
+
 
 def is_proxy_ready(timeout=2):
     """Check if the proxy is ready to receive requests"""

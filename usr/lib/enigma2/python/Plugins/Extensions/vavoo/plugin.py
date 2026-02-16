@@ -311,7 +311,9 @@ def check_vavoo_connectivity():
             print("[Connectivity] vavoo.to is reachable")
             return True
         else:
-            print("[Connectivity] vavoo.to returned {0}".format(response.status_code))
+            print(
+                "[Connectivity] vavoo.to returned {0}".format(
+                    response.status_code))
             return False
     except Exception as e:
         print("[Connectivity] Cannot reach vavoo.to: {0}".format(e))
@@ -3252,13 +3254,15 @@ class VavooSearch(Screen):
                 # Separa in parti senza virgolette
                 part1 = _("Search:")
                 part2 = _("Found: {} channels").format(len(self.filteredList))
-                message = '{0} "{1}" - {2}'.format(part1, self.search_text, part2)
+                message = '{0} "{1}" - {2}'.format(part1,
+                                                   self.search_text, part2)
                 self["status"].setText(message)
             else:
                 # Separa in parti senza virgolette
                 part1 = _("Search:")
                 part2 = _("No channels found")
-                message = '{0} "{1}" - {2}'.format(part1, self.search_text, part2)
+                message = '{0} "{1}" - {2}'.format(part1,
+                                                   self.search_text, part2)
                 self["status"].setText(message)
 
         self.updateChannelList()
@@ -3788,7 +3792,8 @@ class Playstream2(
 
         if self.eof_count <= 3:
             delay = 2 + (self.eof_count * 2)
-            print("[Playstream2] Restarting from __evEOF in {} seconds".format(delay))
+            print(
+                "[Playstream2] Restarting from __evEOF in {} seconds".format(delay))
             self.restartStreamDelayed(delay * 1000)
         else:
             print("[Playstream2] Too many EOFs in __evEOF")

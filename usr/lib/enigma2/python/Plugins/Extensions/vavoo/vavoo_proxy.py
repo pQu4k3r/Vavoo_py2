@@ -333,7 +333,7 @@ class VavooProxy:
                             token_age = now - self.addon_sig_data["ts"]
                             # Refresh if token older than 8 minutes (480s)
                             if token_age > 480:
-                                print("[Token Monitor] Token old (" +
+                                print("[Token Monitor] Token old (" + \
                                       str(int(token_age)) + "s), refreshing...")
                                 self.refresh_addon_sig_if_needed(force=True)
 
@@ -444,7 +444,9 @@ class VavooProxy:
                             print(
                                 "[AddonSig] No addonSig received from {0}".format(url))
                     except Exception as e:
-                        print("[AddonSig] Request to {0} failed: {1}".format(url, e))
+                        print(
+                            "[AddonSig] Request to {0} failed: {1}".format(
+                                url, e))
 
                 if sig:
                     self.addon_sig_data["sig"] = sig
@@ -1266,7 +1268,7 @@ def start_proxy():
                         try:
                             proxy.server.shutdown()
                             proxy.server.server_close()
-                        except:
+                        except BaseException:
                             pass
 
                     proxy = VavooProxy()  # Recreate proxy
@@ -1286,7 +1288,7 @@ def start_proxy():
                     try:
                         proxy.server.shutdown()
                         proxy.server.server_close()
-                    except:
+                    except BaseException:
                         pass
 
                 proxy = VavooProxy()  # Recreate proxy
