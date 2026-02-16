@@ -1,0 +1,509 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: vavoo v1.20\n"
+"POT-Creation-Date: 2026-01-26 21:59+0100\n"
+"PO-Revision-Date: \n"
+"Last-Translator: weeping <a.weeping@gmail.com>\n"
+"Language-Team: a.weeping@gmail.com\n"
+"Language: es_ES\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.8\n"
+"X-Poedit-Basepath: ../../..\n"
+"X-Poedit-SearchPath-0: __init__.py\n"
+"X-Poedit-SearchPath-1: bouquet_manager.py\n"
+"X-Poedit-SearchPath-2: plugin.py\n"
+"X-Poedit-SearchPath-3: start_proxy.py\n"
+"X-Poedit-SearchPath-4: vavoo_proxy.py\n"
+"X-Poedit-SearchPath-5: vUtils.py\n"
+
+msgid "(%(count)d channels)"
+msgstr ""
+
+msgid "(%d channels)?"
+msgstr ""
+
+msgid "(%s files deleted)"
+msgstr ""
+
+msgid "- Auto token refresh every 9 minutes"
+msgstr ""
+
+#, fuzzy
+msgid "- Automatic bouquet generation"
+msgstr "Activar Actualización Automática de Bouquet"
+
+msgid "- Category bouquets"
+msgstr ""
+
+msgid "- Commercial use is strictly prohibited"
+msgstr ""
+
+msgid "- Community: Linuxsat-support.com, Corvoboys Forum"
+msgstr ""
+
+msgid "- Container bouquets"
+msgstr ""
+
+msgid "- Country bouquets"
+msgstr ""
+
+msgid "- For personal use only"
+msgstr ""
+
+msgid "- Free content only"
+msgstr ""
+
+msgid "- Graphics: @oktus"
+msgstr ""
+
+msgid "- HTTP Live Streaming"
+msgstr ""
+
+msgid "- Integrated proxy system"
+msgstr ""
+
+msgid "- No direct server hosting"
+msgstr ""
+
+msgid "- Redistribution must maintain attribution"
+msgstr ""
+
+msgid "- Service references: 4097, 5001, 5002"
+msgstr ""
+
+msgid "- Streams from public sources"
+msgstr ""
+
+msgid "- TS/M3U8 formats"
+msgstr ""
+
+msgid "- Technical support: Qu4k3, @KiddaC, @giorbak"
+msgstr ""
+
+msgid "Active Automatic Bouquet Update"
+msgstr "Activar Actualización Automática de Bouquet"
+
+msgid "Active or Disactive lan Ipv6."
+msgstr ""
+
+msgid "All countries (%d)"
+msgstr ""
+
+msgid "At an interval of hours or at a fixed time"
+msgstr "Con un intervalo de tiempo o una hora fija"
+
+msgid "Author:"
+msgstr ""
+
+#, fuzzy
+msgid "Auto-refresh stream (minutes):"
+msgstr "Intervalo de actualización (minutos):"
+
+msgid "Back"
+msgstr "Volver"
+
+#, fuzzy
+msgid "Backspace"
+msgstr "Volver"
+
+msgid "Bottom"
+msgstr ""
+
+msgid "Bouquet '%(name)s' created successfully!"
+msgstr ""
+
+msgid "Bouquet Position in List"
+msgstr ""
+
+msgid "Bouquet creation error: %s"
+msgstr ""
+
+msgid "Bouquets reorganized successfully!"
+msgstr ""
+
+msgid "Cancel"
+msgstr ""
+
+msgid "Cancel execution?"
+msgstr ""
+
+msgid "Case: {}"
+msgstr ""
+
+msgid "Changelog: {changelog}"
+msgstr ""
+
+msgid "Channels: %d"
+msgstr ""
+
+msgid "Checking proxy..."
+msgstr ""
+
+msgid "Clear All"
+msgstr ""
+
+msgid "Configuration saved successfully!"
+msgstr ""
+
+msgid "Configure Dns Server for Box."
+msgstr ""
+
+msgid "Configure Fonts."
+msgstr ""
+
+msgid "Configure Main Background Image."
+msgstr ""
+
+msgid "Configure at a fixed time"
+msgstr "Configurar hora fija"
+
+msgid "Configure every interval of minutes from now"
+msgstr "Configurar los intervalo de minutos a partir de ahora"
+
+msgid "Configure service Reference Iptv-Gstreamer-Exteplayer3"
+msgstr "Configuracion del Reproductor (IPTV-GStreamer-Exteplayer3)"
+
+msgid "Congrats! You already have the latest version..."
+msgstr "¡Enhorabuena! Ya tienes la última versión..."
+
+msgid "Console"
+msgstr ""
+
+msgid "Countries"
+msgstr ""
+
+msgid "Countries: %(generated)d/%(total)d"
+msgstr ""
+
+msgid "Country: %s"
+msgstr ""
+
+msgid "Credits:"
+msgstr ""
+
+msgid "Default View"
+msgstr ""
+
+msgid "Default view when opening the plugin"
+msgstr ""
+
+msgid "Do you want to export this bouquet?"
+msgstr ""
+
+msgid "Do you want to install it now?"
+msgstr ""
+
+msgid "Do you want to install update ( %s ) now?"
+msgstr ""
+
+msgid "Eg: Arabic or other language."
+msgstr ""
+
+msgid "Enter text to search..."
+msgstr ""
+
+msgid "Error starting channel"
+msgstr ""
+
+msgid "Error: %s"
+msgstr ""
+
+msgid "Exit"
+msgstr "Salir"
+
+msgid "Export"
+msgstr "Exportar"
+
+msgid "Failed to refresh proxy token"
+msgstr ""
+
+msgid "Failed to refresh proxy:"
+msgstr ""
+
+msgid "Failed: %(failed)d"
+msgstr ""
+
+msgid "Force proxy refresh?"
+msgstr ""
+
+msgid "Found: {} channels"
+msgstr ""
+
+msgid "Generate .m3u file for:"
+msgstr ""
+
+msgid "Generate .m3u files (Ok for Exec)"
+msgstr ""
+
+msgid "Generate .m3u files and save to device %s."
+msgstr ""
+
+msgid "Generate .m3u files and save to device %s?"
+msgstr ""
+
+msgid "Generate .m3u files for ALL %d countries?"
+msgstr ""
+
+msgid "Hide/Show"
+msgstr ""
+
+msgid "Important Notes:"
+msgstr ""
+
+msgid "Ipv6 State Of Lan (On/Off)"
+msgstr ""
+
+msgid "Keyboard"
+msgstr ""
+
+msgid "Last channel update: %s"
+msgstr "Última actualización del canal: %s"
+
+msgid "License:"
+msgstr ""
+
+msgid "License: CC BY-NC-SA 4.0"
+msgstr ""
+
+msgid "Link in Main Menu"
+msgstr "Enlace en Menu Principal"
+
+msgid "Lower = less interruption but more refreshes"
+msgstr ""
+
+msgid "M3U file generated successfully!"
+msgstr ""
+
+msgid "M3U generation completed!"
+msgstr ""
+
+msgid "M3U generation error: %s"
+msgstr ""
+
+msgid "Movie Services Reference"
+msgstr "Reproductor de películas"
+
+msgid "New version {version} is available."
+msgstr ""
+
+msgid "No Internet connection detected. Please check your network."
+msgstr ""
+
+#, fuzzy
+msgid "No channels found"
+msgstr "No se han encontrado canales!!!"
+
+#, fuzzy
+msgid "No channels found for '%(name)s'"
+msgstr "No se han encontrado canales!!!"
+
+#, fuzzy
+msgid "No channels found for: %s"
+msgstr "No se han encontrado canales!!!"
+
+msgid "No channels found in search!!!"
+msgstr "No se han encontrado canales!!!"
+
+msgid "No valid channels for: %s"
+msgstr ""
+
+msgid "Now %s"
+msgstr ""
+
+msgid "Only one specific country"
+msgstr ""
+
+msgid "Please try another channel."
+msgstr ""
+
+msgid "Position of Vavoo bouquets in the main list"
+msgstr ""
+
+msgid "Press TEXT button to type, BACKSPACE to delete"
+msgstr ""
+
+msgid "Proxy is not running. Please start the proxy first."
+msgstr ""
+
+msgid "Proxy not active. Unable to generate M3U file."
+msgstr ""
+
+msgid "Proxy not responding after"
+msgstr ""
+
+msgid "Proxy restarting... Please wait"
+msgstr ""
+
+msgid "Proxy token refreshed successfully"
+msgstr ""
+
+msgid "Really close without saving settings?"
+msgstr "Salir sin guardar la configuración?"
+
+msgid "Recommended: 5-8 minutes"
+msgstr ""
+
+msgid "Refresh stream every X minutes (1-15)"
+msgstr ""
+
+msgid "Reload Bouqet"
+msgstr ""
+
+msgid "Remove"
+msgstr "Eliminar"
+
+msgid "Remove ALL Vavoo bouquets?"
+msgstr ""
+
+msgid "Restart"
+msgstr ""
+
+msgid "SELECT YOUR CHOICE"
+msgstr "SELECCIONAR OPCIONES"
+
+msgid "Save"
+msgstr "Guardar"
+
+msgid "Saved in: %(path)s"
+msgstr ""
+
+msgid "Saved in: %s"
+msgstr ""
+
+msgid "Schedule type:"
+msgstr "Tipo Programación:"
+
+#, fuzzy
+msgid "Scheduled List Update:"
+msgstr "Tipo Programación:"
+
+msgid "Search"
+msgstr "Buscar"
+
+msgid "Search Channels:"
+msgstr ""
+
+#, fuzzy
+msgid "Search..."
+msgstr "Buscar"
+
+#, fuzzy
+msgid "Search:"
+msgstr "Buscar"
+
+msgid "Select Background"
+msgstr ""
+
+msgid "Select DNS Server"
+msgstr ""
+
+msgid "Select Fonts"
+msgstr "Seleccionar Fuente"
+
+msgid "Select M3U export mode:"
+msgstr ""
+
+msgid "Select country to export M3U:"
+msgstr ""
+
+msgid "Server for Player Used"
+msgstr ""
+
+msgid "Server for player."
+msgstr ""
+
+msgid "Showing all channels: {}"
+msgstr ""
+
+msgid "Space"
+msgstr ""
+
+msgid "Stream ended. Too many connection issues."
+msgstr ""
+
+msgid "Technical Features:"
+msgstr ""
+
+msgid "This will refresh the authentication token."
+msgstr ""
+
+msgid "This will remove:"
+msgstr ""
+
+msgid "Time to start update:"
+msgstr "Hora de inicio de actualizacion:"
+
+msgid "Top"
+msgstr ""
+
+msgid "Total channels: %(total_channels)d"
+msgstr ""
+
+msgid "UPPERCASE"
+msgstr ""
+
+msgid "Update Aborted!"
+msgstr "Actualización Abortada!"
+
+msgid "Update Me"
+msgstr "Actualizar"
+
+msgid "Update interval (minutes):"
+msgstr "Intervalo de actualización (minutos):"
+
+msgid "Vavoo Stream Live"
+msgstr "Vavoo Streaming en Directo"
+
+msgid "Vavoo Stream Live - Information"
+msgstr ""
+
+#, fuzzy
+msgid "Vavoo Stream Live Plugin"
+msgstr "Vavoo Streaming en Directo"
+
+msgid "Vavoo bouquets removed successfully!"
+msgstr ""
+
+msgid "Version:"
+msgstr ""
+
+msgid "Waiting for proxy..."
+msgstr ""
+
+msgid "You can start it from the menu or by pressing the TEXT button."
+msgstr ""
+
+msgid "fixed time"
+msgstr "hora fija"
+
+msgid "interval"
+msgstr "intervalo"
+
+msgid "lowercase"
+msgstr ""
+
+msgid "seconds"
+msgstr ""
+
+#, fuzzy, python-brace-format
+#~| msgid ""
+#~| "New version %s is available.\n"
+#~| "\n"
+#~| "Changelog: %s \n"
+#~| "\n"
+#~| "Do you want to install it now?"
+#~ msgid ""
+#~ "New version {version} is available.\n"
+#~ "\n"
+#~ "Changelog: {changelog}\n"
+#~ "\n"
+#~ "Do you want to install it now?"
+#~ msgstr ""
+#~ "Nueva versión %s disponible.\n"
+#~ "\n"
+#~ "Registro de cambios: %s\n"
+#~ "\n"
+#~ "¿Quieres actualizar?"

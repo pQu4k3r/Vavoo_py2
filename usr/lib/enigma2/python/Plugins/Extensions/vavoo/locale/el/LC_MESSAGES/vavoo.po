@@ -1,0 +1,472 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: vavoo\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: giorbak\n"
+"Language: el\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.8\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+
+msgid "(%(count)d channels)"
+msgstr "(%(count)d κανάλια)"
+
+msgid "(%d channels)?"
+msgstr "(%d κανάλια);"
+
+msgid "(%s files deleted)"
+msgstr "(%s αρχεία διαγράφηκαν)"
+
+msgid "- Auto token refresh every 9 minutes"
+msgstr "- Αυτόματη ανανέωση token κάθε 9 λεπτά"
+
+msgid "- Automatic bouquet generation"
+msgstr "- Αυτόματη δημιουργία μπουκέτου"
+
+msgid "- Category bouquets"
+msgstr "- Μπουκέτα κατηγορίας"
+
+msgid "- Commercial use is strictly prohibited"
+msgstr "- Απαγορεύεται αυστηρά η εμπορική χρήση"
+
+msgid "- Community: Linuxsat-support.com, Corvoboys Forum"
+msgstr "- Κοινότητα: Linuxsat-support.com, Corvoboys Forum"
+
+msgid "- Container bouquets"
+msgstr "- Μπουκέτα κοντέινερ"
+
+msgid "- Country bouquets"
+msgstr "- Μπουκέτα χώρας"
+
+msgid "- For personal use only"
+msgstr "- Μόνο για προσωπική χρήση"
+
+msgid "- Free content only"
+msgstr "- Μόνο δωρεάν περιεχόμενο"
+
+msgid "- Graphics: @oktus"
+msgstr "- Γραφικά: @oktus"
+
+msgid "- HTTP Live Streaming"
+msgstr "- Ζωντανή ροή HTTP"
+
+msgid "- Integrated proxy system"
+msgstr "- Ενσωματωμένο σύστημα proxy"
+
+msgid "- No direct server hosting"
+msgstr "- Δεν επιτρέπεται άμεση φιλοξενία διακομιστή"
+
+msgid "- Redistribution must maintain attribution"
+msgstr "- Η αναδιανομή πρέπει να διατηρεί την αναφορά στον δημιουργό"
+
+msgid "- Service references: 4097, 5001, 5002"
+msgstr "- Αναφορές υπηρεσιών: 4097, 5001, 5002"
+
+msgid "- Streams from public sources"
+msgstr "- Ροές από δημόσιες πηγές"
+
+msgid "- TS/M3U8 formats"
+msgstr "- Μορφές TS/M3U8"
+
+msgid "- Technical support: Qu4k3, @KiddaC, @giorbak"
+msgstr "- Τεχνική υποστήριξη: Qu4k3, @KiddaC, @giorbak"
+
+msgid "Active Automatic Bouquet Update"
+msgstr "Ενεργοποίηση αυτόματης ενημέρωσης μπουκέτου"
+
+msgid "Active or Disactive lan Ipv6."
+msgstr "Ενεργοποίηση ή απενεργοποίηση lan Ipv6."
+
+msgid "All countries (%d)"
+msgstr "Όλες οι χώρες (%d)"
+
+msgid "At an interval of hours or at a fixed time"
+msgstr "Σε διάστημα ωρών ή σε καθορισμένη ώρα"
+
+msgid "Author:"
+msgstr "Συγγραφέας:"
+
+msgid "Auto-refresh stream (minutes):"
+msgstr "Αυτόματη ανανέωση ροής (λεπτά):"
+
+msgid "Back"
+msgstr "Πίσω"
+
+msgid "Backspace"
+msgstr "Backspace"
+
+msgid "Bottom"
+msgstr "Κάτω"
+
+msgid "Bouquet '%(name)s' created successfully!"
+msgstr "Το μπουκέτο '%(name)s' δημιουργήθηκε με επιτυχία!"
+
+msgid "Bouquet Position in List"
+msgstr "Θέση του μπουκέτου στη λίστα"
+
+msgid "Bouquet creation error: %s"
+msgstr "Σφάλμα δημιουργίας μπουκέτου: %s"
+
+msgid "Bouquets reorganized successfully!"
+msgstr "Η αναδιοργάνωση των μπουκέτων ολοκληρώθηκε με επιτυχία!"
+
+msgid "Cancel"
+msgstr "Άκυρο"
+
+msgid "Cancel execution?"
+msgstr "Να γίνει ακύρωση της εκτέλεσης;"
+
+msgid "Case: {}"
+msgstr "Περίπτωση: {}"
+
+msgid "Changelog: {changelog}"
+msgstr "Αρχείο αλλαγών: {changelog}"
+
+msgid "Channels: %d"
+msgstr "Κανάλια: %d"
+
+msgid "Checking proxy..."
+msgstr "Έλεγχος proxy..."
+
+msgid "Clear All"
+msgstr "Καθαρισμός όλων"
+
+msgid "Configuration saved successfully!"
+msgstr "Η ρύθμιση αποθηκεύτηκε με επιτυχία!"
+
+msgid "Configure Dns Server for Box."
+msgstr "Ρύθμιση διακομιστή Dns για τον δέκτη."
+
+msgid "Configure Fonts."
+msgstr "Ρύθμιση γραμματοσειρών."
+
+msgid "Configure Main Background Image."
+msgstr "Ρύθμιση της κύριας εικόνας φόντου."
+
+msgid "Configure at a fixed time"
+msgstr "Ρύθμιση σε καθορισμένη ώρα"
+
+msgid "Configure every interval of minutes from now"
+msgstr "Ρύθμιση διαστήματος λεπτών από τώρα"
+
+msgid "Configure service Reference Iptv-Gstreamer-Exteplayer3"
+msgstr "Ρύθμιση αναφοράς υπηρεσιών Iptv-Gstreamer-Exteplayer3"
+
+msgid "Congrats! You already have the latest version..."
+msgstr "Συγχαρητήρια! Έχετε ήδη την πιο πρόσφατη έκδοση..."
+
+msgid "Console"
+msgstr "Κονσόλα"
+
+msgid "Countries"
+msgstr "Χώρες"
+
+msgid "Countries: %(generated)d/%(total)d"
+msgstr "Χώρες: %(generated)d/%(total)d"
+
+msgid "Country: %s"
+msgstr "Χώρα: %s"
+
+msgid "Credits:"
+msgstr "Συντελεστές:"
+
+msgid "Default View"
+msgstr "Προεπιλεγμένη προβολή"
+
+msgid "Default view when opening the plugin"
+msgstr "Προεπιλεγμένη προβολή κατά το άνοιγμα του πρόσθετου"
+
+msgid "Do you want to export this bouquet?"
+msgstr "Θέλετε να εξάγετε αυτό το μπουκέτο;"
+
+msgid "Do you want to install it now?"
+msgstr "Θέλετε να το εγκαταστήσετε τώρα;"
+
+msgid "Do you want to install update ( %s ) now?"
+msgstr "Θέλετε να εγκαταστήσετε την ενημέρωση ( %s ) τώρα;"
+
+msgid "Eg: Arabic or other language."
+msgstr "Π.χ.: Αραβικά ή άλλη γλώσσα."
+
+msgid "Enter text to search..."
+msgstr "Εισάγετε κείμενο για αναζήτηση..."
+
+msgid "Error starting channel"
+msgstr "Σφάλμα εκκίνησης καναλιού"
+
+msgid "Error: %s"
+msgstr "Σφάλμα: %s"
+
+msgid "Exit"
+msgstr "Έξοδος"
+
+msgid "Export"
+msgstr "Εξαγωγή"
+
+msgid "Failed to refresh proxy token"
+msgstr "Αποτυχία ανανέωσης του token του proxy"
+
+msgid "Failed to refresh proxy:"
+msgstr "Αποτυχία ανανέωσης proxy:"
+
+msgid "Failed: %(failed)d"
+msgstr "Απέτυχαν: %(failed)d"
+
+msgid "Force proxy refresh?"
+msgstr "Εξαναγκασμένη ανανέωση proxy;"
+
+msgid "Found: {} channels"
+msgstr "Βρέθηκαν: {} κανάλια"
+
+msgid "Generate .m3u file for:"
+msgstr "Δημιουργία αρχείου .m3u για:"
+
+msgid "Generate .m3u files (Ok for Exec)"
+msgstr "Δημιουργία αρχείων .m3u (πιέστε OK)"
+
+msgid "Generate .m3u files and save to device %s."
+msgstr "Δημιουργία αρχείων .m3u και αποθήκευση στο %s."
+
+msgid "Generate .m3u files and save to device %s?"
+msgstr "Να γίνει δημιουργία αρχείων .m3u και να αποθηκευτούν στη συσκευή %s;"
+
+msgid "Generate .m3u files for ALL %d countries?"
+msgstr "Δημιουργία αρχείων .m3u για ΟΛΕΣ τις %d χώρες;"
+
+msgid "Hide/Show"
+msgstr "Απόκρυψη/Εμφάνιση"
+
+msgid "Important Notes:"
+msgstr "Σημαντικές σημειώσεις:"
+
+msgid "Ipv6 State Of Lan (On/Off)"
+msgstr "Κατάσταση Lan Ipv6 (On/Off)"
+
+msgid "Keyboard"
+msgstr "Πληκτρολόγιο"
+
+msgid "Last channel update: %s"
+msgstr "Τελευταία ενημέρωση καναλιών: %s"
+
+msgid "License:"
+msgstr "Άδεια χρήσης:"
+
+msgid "License: CC BY-NC-SA 4.0"
+msgstr "Άδεια χρήσης: CC BY-NC-SA 4.0"
+
+msgid "Link in Main Menu"
+msgstr "Σύνδεσμος στο κύριο μενού"
+
+msgid "Lower = less interruption but more refreshes"
+msgstr "Χαμηλό = λίγες διακοπές, πολλές ανανεώσεις"
+
+msgid "M3U file generated successfully!"
+msgstr "Το αρχείο M3U δημιουργήθηκε με επιτυχία!"
+
+msgid "M3U generation completed!"
+msgstr "Η δημιουργία M3U ολοκληρώθηκε!"
+
+msgid "M3U generation error: %s"
+msgstr "Σφάλμα δημιουργίας M3U: %s"
+
+msgid "Movie Services Reference"
+msgstr "Αναφορά υπηρεσιών ταινιών"
+
+msgid "New version {version} is available."
+msgstr "Νέα έκδοση {version} είναι διαθέσιμη."
+
+msgid "No Internet connection detected. Please check your network."
+msgstr "Δεν εντοπίστηκε σύνδεση στο Διαδίκτυο. Παρακαλώ ελέγξτε το δίκτυό σας."
+
+msgid "No channels found"
+msgstr "Δεν βρέθηκαν κανάλια"
+
+msgid "No channels found for '%(name)s'"
+msgstr "Δεν βρέθηκαν κανάλια για '%(name)s'"
+
+msgid "No channels found for: %s"
+msgstr "Δεν βρέθηκαν κανάλια για: %s"
+
+msgid "No channels found in search!!!"
+msgstr "Δεν βρέθηκαν κανάλια στην αναζήτηση!!!"
+
+msgid "No valid channels for: %s"
+msgstr "Δεν υπάρχουν έγκυρα κανάλια για: %s"
+
+msgid "Now %s"
+msgstr "Τώρα %s"
+
+msgid "Only one specific country"
+msgstr "Μόνο μία συγκεκριμένη χώρα"
+
+msgid "Please try another channel."
+msgstr "Παρακαλώ δοκιμάστε άλλο κανάλι."
+
+msgid "Position of Vavoo bouquets in the main list"
+msgstr "Θέση των μπουκέτων Vavoo στην κύρια λίστα"
+
+msgid "Press TEXT button to type, BACKSPACE to delete"
+msgstr "Πατήστε το κουμπί TEXT για πληκτρολόγηση, BACKSPACE για διαγραφή"
+
+msgid "Proxy is not running. Please start the proxy first."
+msgstr "Ο proxy δεν εκτελείται. Παρακαλώ εκκινήστε πρώτα τον proxy."
+
+msgid "Proxy not active. Unable to generate M3U file."
+msgstr "Ο proxy δεν είναι ενεργός. Αδυναμία δημιουργίας αρχείου M3U."
+
+msgid "Proxy not responding after"
+msgstr "Ο proxy δεν ανταποκρίνεται μετά από"
+
+msgid "Proxy restarting... Please wait"
+msgstr "Επανεκκίνηση proxy... Παρακαλώ περιμένετε"
+
+msgid "Proxy token refreshed successfully"
+msgstr "Το token του proxy ανανεώθηκε με επιτυχία"
+
+msgid "Really close without saving settings?"
+msgstr "Θέλετε πραγματικά να κλείσετε χωρίς αποθήκευση των ρυθμίσεων;"
+
+msgid "Recommended: 5-8 minutes"
+msgstr "Προτεινόμενο: 5-8 λεπτά"
+
+msgid "Refresh stream every X minutes (1-15)"
+msgstr "Ανανέωση ροής κάθε X λεπτά (1-15)"
+
+msgid "Reload Bouqet"
+msgstr "Φόρτωση μπουκέτων"
+
+msgid "Remove"
+msgstr "Αφαίρεση"
+
+msgid "Remove ALL Vavoo bouquets?"
+msgstr "Αφαίρεση ΟΛΩΝ των μπουκέτων Vavoo;"
+
+msgid "Restart"
+msgstr "Επανεκκίνηση"
+
+msgid "SELECT YOUR CHOICE"
+msgstr "ΕΠΙΛΕΞΤΕ ΤΗΝ ΕΠΙΛΟΓΗ ΣΑΣ"
+
+msgid "Save"
+msgstr "Αποθήκευση"
+
+msgid "Saved in: %(path)s"
+msgstr "Αποθηκεύτηκε σε: %(path)s"
+
+msgid "Saved in: %s"
+msgstr "Αποθηκεύτηκε σε: %s"
+
+msgid "Schedule type:"
+msgstr "Τύπος προγραμματισμού:"
+
+msgid "Scheduled List Update:"
+msgstr "Προγραμματισμός ενημέρωσης λίστας:"
+
+msgid "Search"
+msgstr "Αναζήτηση"
+
+msgid "Search Channels:"
+msgstr "Αναζήτηση καναλιών:"
+
+msgid "Search..."
+msgstr "Αναζήτηση..."
+
+msgid "Search:"
+msgstr "Αναζήτηση:"
+
+msgid "Select Background"
+msgstr "Επιλογή φόντου"
+
+msgid "Select DNS Server"
+msgstr "Επιλογή διακομιστή DNS"
+
+msgid "Select Fonts"
+msgstr "Επιλογή γραμματοσειρών"
+
+msgid "Select M3U export mode:"
+msgstr "Επιλέξτε λειτουργία εξαγωγής M3U:"
+
+msgid "Select country to export M3U:"
+msgstr "Επιλέξτε χώρα για εξαγωγή M3U:"
+
+msgid "Server for Player Used"
+msgstr "Διακομιστής για αναπαραγωγή"
+
+msgid "Server for player."
+msgstr "Διακομιστής για αναπαραγωγή."
+
+msgid "Showing all channels: {}"
+msgstr "Εμφάνιση όλων των καναλιών: {}"
+
+msgid "Space"
+msgstr "Διάστημα"
+
+msgid "Stream ended. Too many connection issues."
+msgstr "Η ροή τερματίστηκε. Πάρα πολλά προβλήματα σύνδεσης."
+
+msgid "Technical Features:"
+msgstr "Τεχνικά χαρακτηριστικά:"
+
+msgid "This will refresh the authentication token."
+msgstr "Αυτό θα ανανεώσει το token πιστοποίησης."
+
+msgid "This will remove:"
+msgstr "Αυτό θα αφαιρέσει:"
+
+msgid "Time to start update:"
+msgstr "Ώρα έναρξης ενημέρωσης:"
+
+msgid "Top"
+msgstr "Πάνω"
+
+msgid "Total channels: %(total_channels)d"
+msgstr "Σύνολο καναλιών: %(total_channels)d"
+
+msgid "UPPERCASE"
+msgstr "ΚΕΦΑΛΑΙΑ"
+
+msgid "Update Aborted!"
+msgstr "Η ενημέρωση ακυρώθηκε!"
+
+msgid "Update Me"
+msgstr "Ενημέρωση Vavoo"
+
+msgid "Update interval (minutes):"
+msgstr "Διάστημα ενημέρωσης (λεπτά)"
+
+msgid "Vavoo Stream Live"
+msgstr "Vavoo Stream Live"
+
+msgid "Vavoo Stream Live - Information"
+msgstr "Vavoo Stream Live - Πληροφορίες"
+
+msgid "Vavoo Stream Live Plugin"
+msgstr "Πρόσθετο Vavoo Stream Live"
+
+msgid "Vavoo bouquets removed successfully!"
+msgstr "Τα μπουκέτα Vavoo αφαιρέθηκαν με επιτυχία!"
+
+msgid "Version:"
+msgstr "Έκδοση:"
+
+msgid "Waiting for proxy..."
+msgstr "Αναμονή για τον proxy..."
+
+msgid "You can start it from the menu or by pressing the TEXT button."
+msgstr "Μπορείτε να τον εκκινήσετε από το μενού ή πατώντας το κουμπί TEXT."
+
+msgid "fixed time"
+msgstr "καθορισμένη ώρα"
+
+msgid "interval"
+msgstr "διάστημα"
+
+msgid "lowercase"
+msgstr "πεζά"
+
+msgid "seconds"
+msgstr "δευτερόλεπτα"

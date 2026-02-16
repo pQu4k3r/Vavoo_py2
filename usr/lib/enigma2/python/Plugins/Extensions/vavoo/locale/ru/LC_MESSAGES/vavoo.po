@@ -1,0 +1,490 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: Warder <ciksa@seznam.cz>\n"
+"Language-Team: \n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.8\n"
+
+msgid "(%(count)d channels)"
+msgstr "(%(count)d каналов)"
+
+msgid "(%d channels)?"
+msgstr "(%d каналов)?"
+
+msgid "(%s files deleted)"
+msgstr "(%s файлов удалено)"
+
+msgid "- Auto token refresh every 9 minutes"
+msgstr "- Автоматическое обновление токена каждые 9 минут"
+
+msgid "- Automatic bouquet generation"
+msgstr "- Автоматическое создание букетов"
+
+msgid "- Category bouquets"
+msgstr "- Категория букетов"
+
+msgid "- Commercial use is strictly prohibited"
+msgstr "- Коммерческое использование строго запрещено"
+
+msgid "- Community: Linuxsat-support.com, Corvoboys Forum"
+msgstr "- Сообщество: Linuxsat-support.com, форум Corvoboys"
+
+msgid "- Container bouquets"
+msgstr "- Букеты в контейнерах"
+
+msgid "- Country bouquets"
+msgstr "- Загородные букеты"
+
+msgid "- For personal use only"
+msgstr "— Только для личного использования"
+
+msgid "- Free content only"
+msgstr "- Только бесплатный контент"
+
+msgid "- Graphics: @oktus"
+msgstr "- Графика: @oktus"
+
+msgid "- HTTP Live Streaming"
+msgstr "- HTTP-трансляция в прямом эфире"
+
+msgid "- Integrated proxy system"
+msgstr "- Интегрированная прокси-система"
+
+msgid "- No direct server hosting"
+msgstr "- Прямого размещения на сервере нет"
+
+msgid "- Redistribution must maintain attribution"
+msgstr "- При распространении необходимо сохранять указание авторства"
+
+msgid "- Service references: 4097, 5001, 5002"
+msgstr "— Номера сервисных работ: 4097, 5001, 5002"
+
+msgid "- Streams from public sources"
+msgstr "- Потоки из общедоступных источников"
+
+msgid "- TS/M3U8 formats"
+msgstr "- Форматы TS/M3U8"
+
+msgid "- Technical support: Qu4k3, @KiddaC, @giorbak"
+msgstr "- Техническая поддержка: Qu4k3, @KiddaC, @giorbak"
+
+msgid "Active Automatic Bouquet Update"
+msgstr "Активное автоматическое обновление букета"
+
+msgid "Active or Disactive lan Ipv6."
+msgstr "Активный или деактивированный IPv6 в локальной сети."
+
+msgid "All countries (%d)"
+msgstr "Все страны (%d)"
+
+msgid "At an interval of hours or at a fixed time"
+msgstr "С интервалом в несколько часов или в фиксированное время"
+
+msgid "Author:"
+msgstr "Автор:"
+
+msgid "Auto-refresh stream (minutes):"
+msgstr "Автоматическое обновление потока (в минутах):"
+
+msgid "Back"
+msgstr "Назад"
+
+msgid "Backspace"
+msgstr "Возврат"
+
+msgid "Bottom"
+msgstr "Низ"
+
+msgid "Bouquet '%(name)s' created successfully!"
+msgstr "Букет '%(name)s' успешно создан!"
+
+msgid "Bouquet Position in List"
+msgstr "Положение букета в списке"
+
+msgid "Bouquet creation error: %s"
+msgstr "Ошибка создания букета: %s"
+
+msgid "Bouquets reorganized successfully!"
+msgstr "Букеты успешно реорганизованы!"
+
+msgid "Cancel"
+msgstr "Отмена"
+
+msgid "Cancel execution?"
+msgstr "Отменить исполнение?"
+
+msgid "Case: {}"
+msgstr "Случай: {}"
+
+msgid "Changelog: {changelog}"
+msgstr "Список изменений: {changelog}"
+
+msgid "Channels: %d"
+msgstr "Каналы: %d"
+
+msgid "Checking proxy..."
+msgstr ""
+
+msgid "Clear All"
+msgstr "Очистить все"
+
+msgid "Configuration saved successfully!"
+msgstr "Конфигурация успешно сохранена!"
+
+msgid "Configure Dns Server for Box."
+msgstr "Настройте DNS-сервер для Box."
+
+msgid "Configure Fonts."
+msgstr "Настройка шрифтов."
+
+msgid "Configure Main Background Image."
+msgstr "Настройте основное фоновое изображение."
+
+msgid "Configure at a fixed time"
+msgstr "Настройка в фиксированное время"
+
+msgid "Configure every interval of minutes from now"
+msgstr "Настройте каждый интервал минут с этого момента"
+
+msgid "Configure service Reference Iptv-Gstreamer-Exteplayer3"
+msgstr "Ссылка на настройку службы IPTV-Gstreamer-Exteplayer3"
+
+msgid "Congrats! You already have the latest version..."
+msgstr "Поздравляю! У вас уже установлена последняя версия..."
+
+msgid "Console"
+msgstr "Консоль"
+
+msgid "Countries"
+msgstr "Страны"
+
+msgid "Countries: %(generated)d/%(total)d"
+msgstr "Страны: %(generated)d/%(total)d"
+
+msgid "Country: %s"
+msgstr "Страна: %s"
+
+msgid "Credits:"
+msgstr "Кредиты:"
+
+msgid "Default View"
+msgstr "Вид по умолчанию"
+
+msgid "Default view when opening the plugin"
+msgstr "Вид по умолчанию при открытии плагина"
+
+msgid "Do you want to export this bouquet?"
+msgstr "Вы хотите экспортировать этот букет?"
+
+msgid "Do you want to install it now?"
+msgstr ""
+"Доступна новая версия %s\n"
+"\n"
+"Журнал изменений: %s\n"
+"\n"
+"Вы хотите установить ее сейчас?"
+
+msgid "Do you want to install update ( %s ) now?"
+msgstr "Хотите установить обновление ( %s ) сейчас?"
+
+msgid "Eg: Arabic or other language."
+msgstr "Например: арабский или другой язык."
+
+msgid "Enter text to search..."
+msgstr "Введите текст для поиска..."
+
+msgid "Error starting channel"
+msgstr "Ошибка при запуске канала"
+
+msgid "Error: %s"
+msgstr "Ошибка: %s"
+
+msgid "Exit"
+msgstr "Выход"
+
+msgid "Export"
+msgstr "Экспорт"
+
+msgid "Failed to refresh proxy token"
+msgstr ""
+
+msgid "Failed to refresh proxy:"
+msgstr ""
+
+msgid "Failed: %(failed)d"
+msgstr "Не удалось: %(failed)d"
+
+msgid "Force proxy refresh?"
+msgstr ""
+
+msgid "Found: {} channels"
+msgstr "Найдено {} каналов"
+
+msgid "Generate .m3u file for:"
+msgstr "Создайте файл .m3u для:"
+
+msgid "Generate .m3u files (Ok for Exec)"
+msgstr "Генерация файлов .m3u (подходит для Exec)"
+
+msgid "Generate .m3u files and save to device %s."
+msgstr "Создайте файлы .m3u и сохраните их на устройстве %s."
+
+msgid "Generate .m3u files and save to device %s?"
+msgstr "Сгенерировать файлы .m3u и сохранить на устройстве %s?"
+
+msgid "Generate .m3u files for ALL %d countries?"
+msgstr "Создать файлы .m3u для ВСЕХ %d стран?"
+
+msgid "Hide/Show"
+msgstr "Скрыть / Показать"
+
+msgid "Important Notes:"
+msgstr "Важные примечания:"
+
+msgid "Ipv6 State Of Lan (On/Off)"
+msgstr "Состояние локальной сети IPv6 (вкл/выкл)"
+
+msgid "Keyboard"
+msgstr "Клавиатура"
+
+msgid "Last channel update: %s"
+msgstr "Последнее обновление канала: %s"
+
+msgid "License:"
+msgstr "Лицензия:"
+
+msgid "License: CC BY-NC-SA 4.0"
+msgstr "Лицензия: CC BY-NC-SA 4.0"
+
+msgid "Link in Main Menu"
+msgstr "Ссылка в главном меню"
+
+msgid "Lower = less interruption but more refreshes"
+msgstr "Более низкое значение = меньше прерываний, но больше обновлений"
+
+msgid "M3U file generated successfully!"
+msgstr "Файл M3U успешно сгенерирован!"
+
+msgid "M3U generation completed!"
+msgstr "Создание M3U завершено!"
+
+msgid "M3U generation error: %s"
+msgstr "Ошибка генерации M3U: %s"
+
+msgid "Movie Services Reference"
+msgstr "Справочник киносервисов"
+
+msgid "New version {version} is available."
+msgstr "Доступна новая версия {version}."
+
+msgid "No Internet connection detected. Please check your network."
+msgstr ""
+
+msgid "No channels found"
+msgstr "Не найдено каналлов"
+
+msgid "No channels found for '%(name)s'"
+msgstr "Для '%(name)s' каналы не найдены"
+
+msgid "No channels found for: %s"
+msgstr "Для: %s каналы не найдены"
+
+msgid "No channels found in search!!!"
+msgstr "В поиске каналов не найдено!!!"
+
+msgid "No valid channels for: %s"
+msgstr "Нет действительных каналов для: %s"
+
+msgid "Now %s"
+msgstr "Теперь %s"
+
+msgid "Only one specific country"
+msgstr "Только одна конкретная страна"
+
+msgid "Please try another channel."
+msgstr "Попробуйте другой канал."
+
+msgid "Position of Vavoo bouquets in the main list"
+msgstr "Положение букетов Vavoo в основном списке"
+
+msgid "Press TEXT button to type, BACKSPACE to delete"
+msgstr "Нажмите кнопку ТЕКСТ для ввода текста, BACKSPACE для удаления"
+
+msgid "Proxy is not running. Please start the proxy first."
+msgstr ""
+
+msgid "Proxy not active. Unable to generate M3U file."
+msgstr "Прокси не активен. Не удалось сгенерировать файл M3U."
+
+msgid "Proxy not responding after"
+msgstr ""
+
+msgid "Proxy restarting... Please wait"
+msgstr ""
+
+#, fuzzy
+msgid "Proxy token refreshed successfully"
+msgstr ""
+"Букеты Vavoo успешно удалены!\n"
+"(Удалено %s файлов)"
+
+msgid "Really close without saving settings?"
+msgstr "Серьёзно закрыть без сохранения настроек?"
+
+msgid "Recommended: 5-8 minutes"
+msgstr "Рекомендуемое время: 5-8 минут"
+
+msgid "Refresh stream every X minutes (1-15)"
+msgstr "Обновляйте поток каждые X минут (1-15)"
+
+msgid "Reload Bouqet"
+msgstr "Перезагрузить букет"
+
+msgid "Remove"
+msgstr "Удалить"
+
+msgid "Remove ALL Vavoo bouquets?"
+msgstr "Удалить ВСЕ букеты Vavoo?"
+
+msgid "Restart"
+msgstr "Перезапуск"
+
+msgid "SELECT YOUR CHOICE"
+msgstr "ВЫБЕРИТЕ СВОЙ ВЫБОР"
+
+msgid "Save"
+msgstr "Сохранить"
+
+msgid "Saved in: %(path)s"
+msgstr "Сохранено в: %(path)s"
+
+msgid "Saved in: %s"
+msgstr "Сохранено в: %s"
+
+msgid "Schedule type:"
+msgstr "Тип графика:"
+
+msgid "Scheduled List Update:"
+msgstr "Обновление списка запланированных событий:"
+
+msgid "Search"
+msgstr "Поиск"
+
+msgid "Search Channels:"
+msgstr "Каналы поиска:"
+
+msgid "Search..."
+msgstr "Поиск..."
+
+msgid "Search:"
+msgstr "Поиск:"
+
+msgid "Select Background"
+msgstr "Выберите фон"
+
+msgid "Select DNS Server"
+msgstr "Выберите DNS-сервер"
+
+msgid "Select Fonts"
+msgstr "Выберите шрифты"
+
+msgid "Select M3U export mode:"
+msgstr "Выберите режим экспорта M3U:"
+
+msgid "Select country to export M3U:"
+msgstr "Выберите страну для экспорта M3U:"
+
+msgid "Server for Player Used"
+msgstr "Сервер для используемого игрока"
+
+msgid "Server for player."
+msgstr "Сервер для игрока."
+
+msgid "Showing all channels: {}"
+msgstr "Показаны все каналы: {}"
+
+msgid "Space"
+msgstr "Пробел"
+
+msgid "Stream ended. Too many connection issues."
+msgstr "Трансляция завершилась. Слишком много проблем с подключением."
+
+msgid "Technical Features:"
+msgstr "Технические характеристики:"
+
+msgid "This will refresh the authentication token."
+msgstr ""
+
+msgid "This will remove:"
+msgstr "Это удалит:"
+
+msgid "Time to start update:"
+msgstr "Время начать обновление:"
+
+msgid "Top"
+msgstr "Сверху"
+
+msgid "Total channels: %(total_channels)d"
+msgstr "Всего каналов: %(total_channels)d"
+
+msgid "UPPERCASE"
+msgstr "ВЕРХНИЙ РЕГИСТР"
+
+msgid "Update Aborted!"
+msgstr "Обновление прервано!"
+
+msgid "Update Me"
+msgstr "Обновите меня"
+
+msgid "Update interval (minutes):"
+msgstr "Интервал обновления (минуты):"
+
+msgid "Vavoo Stream Live"
+msgstr "Vavoo Stream Live"
+
+msgid "Vavoo Stream Live - Information"
+msgstr "Прямая трансляция Vavoo — информация"
+
+msgid "Vavoo Stream Live Plugin"
+msgstr "Плагин Vavoo Stream Live"
+
+msgid "Vavoo bouquets removed successfully!"
+msgstr ""
+"Букеты Vavoo успешно удалены!\n"
+"(Удалено %s файлов)"
+
+msgid "Version:"
+msgstr "Версия:"
+
+msgid "Waiting for proxy..."
+msgstr ""
+
+msgid "You can start it from the menu or by pressing the TEXT button."
+msgstr ""
+
+msgid "fixed time"
+msgstr "установленный срок"
+
+msgid "interval"
+msgstr "интервал"
+
+msgid "lowercase"
+msgstr "строчные буквы"
+
+msgid "seconds"
+msgstr ""
+
+#~ msgid "- - - -"
+#~ msgstr "- - - -"
+
+#~ msgid "Error starting stream via proxy"
+#~ msgstr "Ошибка при запуске потока через прокси"
+
+#~ msgid "Scheduled Bouquet Update:"
+#~ msgstr "Плановое обновление букета:"
