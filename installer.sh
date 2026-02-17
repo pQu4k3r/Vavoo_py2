@@ -4,7 +4,7 @@ version='1.47'
 changelog='\nProxy emproved: No Lock\nOffer coffee please :)'
 
 TMPPATH=/tmp/vavoo-install
-FILEPATH=/tmp/vavoo-main.tar.gz
+FILEPATH=/tmp/Vavoo_py2-main.tar.gz
 
 if [ ! -d /usr/lib64 ]; then
     PLUGINPATH=/usr/lib/enigma2/python/Plugins/Extensions/vavoo
@@ -123,14 +123,14 @@ fi
 echo "Installing plugin files..."
 mkdir -p "$PLUGINPATH"
 
-if [ -d "$TMPPATH/vavoo-main/usr/lib/enigma2/python/Plugins/Extensions/vavoo" ]; then
-    cp -r "$TMPPATH/vavoo-main/usr/lib/enigma2/python/Plugins/Extensions/vavoo"/* "$PLUGINPATH/" 2>/dev/null
+if [ -d "$TMPPATH/Vavoo_py2-main/usr/lib/enigma2/python/Plugins/Extensions/vavoo" ]; then
+    cp -r "$TMPPATH/Vavoo_py2-main/usr/lib/enigma2/python/Plugins/Extensions/vavoo"/* "$PLUGINPATH/" 2>/dev/null
     echo "Copied from standard plugin directory"
-elif [ -d "$TMPPATH/vavoo-main/usr/lib64/enigma2/python/Plugins/Extensions/vavoo" ]; then
+elif [ -d "$TMPPATH/Vavoo_py2-main/usr/lib64/enigma2/python/Plugins/Extensions/vavoo" ]; then
     cp -r "$TMPPATH/vavoo-main/usr/lib64/enigma2/python/Plugins/Extensions/vavoo"/* "$PLUGINPATH/" 2>/dev/null
     echo "Copied from lib64 plugin directory"
-elif [ -d "$TMPPATH/vavoo-main/usr" ]; then
-    cp -r "$TMPPATH/vavoo-main/usr"/* /usr/ 2>/dev/null
+elif [ -d "$TMPPATH/Vavoo_py2-main/usr" ]; then
+    cp -r "$TMPPATH/Vavoo_py2-main/usr"/* /usr/ 2>/dev/null
     echo "Copied entire usr structure"
 else
     echo "Could not find plugin files in extracted archive"
