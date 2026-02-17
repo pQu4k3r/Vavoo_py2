@@ -11,6 +11,8 @@ Homepage: www.corvoboys.org
           www.linuxsat-support.com
 ###########################################################
 """
+from __future__ import print_function
+
 import os
 import re
 import subprocess
@@ -122,13 +124,13 @@ STANDARD_LANGUAGES = [
 
 
 def ensure_directory_structure(lang_code):
-    """Crea la struttura delle cartelle per una lingua specifica"""
+    """Create directory structure for a specific language (Py2/Py3 safe)"""
     lang_dir = os.path.join(LOCALE_DIR, lang_code)
     lc_messages_dir = os.path.join(lang_dir, "LC_MESSAGES")
 
     try:
         if not os.path.exists(lc_messages_dir):
-            os.makedirs(lc_messages_dir, exist_ok=True)
+            os.makedirs(lc_messages_dir)
             print("  Created directory structure for: {}".format(lang_code))
         return lc_messages_dir
     except Exception as e:
@@ -287,10 +289,11 @@ def extract_python_strings():
 def update_pot_file(xml_strings, py_strings):
     """Create or update the final .pot file"""
     # Ensure the folder exists
-    try:
-        os.makedirs(LOCALE_DIR, exist_ok=True)
-    except BaseException:
-        pass
+    if not os.path.exists(LOCALE_DIR):
+        try:
+            os.makedirs(LOCALE_DIR)
+        except Exception as e:
+            print("ERROR creating {}: {}".format(LOCALE_DIR, e))
 
     # Merge all strings
     all_strings = list(set(xml_strings + py_strings))

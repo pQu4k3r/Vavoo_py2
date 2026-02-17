@@ -242,8 +242,8 @@ developer_url = 'aHR0cHM6Ly9hcGkuZ2l0aHViLmNvbS9yZXBvcy9CZWxmYWdvcjIwMDUvdmF2b28
 
 myser = [("https://vavoo.to", "vavoo"), ("https://oha.tooha-tv", "oha"),
          ("https://kool.to", "kool"), ("https://huhu.to", "huhu")]
-mydns = [("None", "Default"), ("google", "Google"),
-         ("coudfire", "Coudfire"), ("quad9", "Quad9")]
+# mydns = [("None", "Default"), ("google", "Google"),
+         # ("coudfire", "Coudfire"), ("quad9", "Quad9")]
 modemovie = [("4097", "4097")]
 if file_exists("/usr/bin/gstplayer"):
     modemovie.append(("5001", "5001"))
@@ -329,6 +329,7 @@ class ConfigSearchText(ConfigText):
 
 config.plugins.vavoo = ConfigSubsection()
 cfg = config.plugins.vavoo
+cfg.proxy_enabled = NoSave(ConfigEnableDisable(default=False))
 cfg.autobouquetupdate = ConfigEnableDisable(default=False)
 cfg.genm3u = NoSave(ConfigYesNo(default=False))
 cfg.server = ConfigSelection(default="https://vavoo.to", choices=myser)
@@ -343,7 +344,7 @@ cfg.fixedtime = ConfigClock(default=46800)
 cfg.last_update = ConfigText(default="Never")
 cfg.stmain = ConfigYesNo(default=True)
 cfg.ipv6 = ConfigEnableDisable(default=False)
-cfg.dns = ConfigSelection(default="Default", choices=mydns)
+# cfg.dns = ConfigSelection(default="Default", choices=mydns)
 cfg.fonts = ConfigSelection(default='vav', choices=fonts)
 cfg.back = ConfigSelection(default='oktus', choices=BakP)
 """
@@ -626,6 +627,9 @@ class vavoo_config(Screen, ConfigListScreen):
         with codecs.open(skin, "r", encoding="utf-8") as f:
             self.skin = f.read()
         self.setup_title = ('Vavoo Config')
+
+        self.old_proxy_enabled = cfg.proxy_enabled.value
+
         self.list = []
         self.onChangedEntry = []
         self["version"] = Label()
@@ -674,6 +678,15 @@ class vavoo_config(Screen, ConfigListScreen):
                 cfg.genm3u,
                 _("Generate .m3u files and save to device %s.") %
                 downloadfree))
+
+        self.list.append(
+            getConfigListEntry(
+                _("Proxy Enabled"),
+                cfg.proxy_enabled,
+                _("Enable or disable proxy.")
+            )
+        )
+
         self.list.append(
             getConfigListEntry(
                 _("Default View"),
@@ -681,6 +694,7 @@ class vavoo_config(Screen, ConfigListScreen):
                 _("Default view when opening the plugin")))
         help_text = _("Server for player.") + "\n" + \
             _("Now %s") % cfg.server.value
+
         self.list.append(
             getConfigListEntry(
                 _("Server for Player Used"),
@@ -688,34 +702,36 @@ class vavoo_config(Screen, ConfigListScreen):
                 help_text
             )
         )
+
         self.list.append(
             getConfigListEntry(
                 _("Movie Services Reference"),
                 cfg.services,
                 _("Configure service Reference Iptv-Gstreamer-Exteplayer3")))
+
         self.list.append(
             getConfigListEntry(
                 _("Bouquet Position in List"),
                 cfg.list_position,
                 _("Position of Vavoo bouquets in the main list"))
         )
+
         help_line1 = _("Refresh stream every X minutes (1-15)")
         help_line2 = _("Recommended: 5-8 minutes")
         help_line3 = _("Lower = less interruption but more refreshes")
         help_text = help_line1 + "\n" + help_line2 + "\n" + help_line3
-
         self.list.append(
             getConfigListEntry(
-                _("Auto-refresh stream (minutes):"),
+                _("Refresh stream (minutes):"),
                 cfg.timerupdate,
                 help_text
             )
         )
-        self.list.append(
-            getConfigListEntry(
-                _("Select DNS Server"),
-                cfg.dns,
-                _("Configure Dns Server for Box.")))
+        # self.list.append(
+            # getConfigListEntry(
+                # _("Select DNS Server"),
+                # cfg.dns,
+                # _("Configure Dns Server for Box.")))
         self.list.append(
             getConfigListEntry(
                 _("Select Background"),
@@ -751,13 +767,13 @@ class vavoo_config(Screen, ConfigListScreen):
                 getConfigListEntry(
                     indent + _("Schedule type:"),
                     cfg.timetype,
-                    _("At an interval of hours or at a fixed time")))
+                    _("At an interval hours or fixed time")))
             if cfg.timetype.value == "interval":
                 self.list.append(
                     getConfigListEntry(
                         2 * indent + _("Update interval (minutes):"),
                         cfg.updateinterval,
-                        _("Configure every interval of minutes from now")))
+                        _("Configure interval minutes from now")))
             if cfg.timetype.value == "fixed time":
                 self.list.append(
                     getConfigListEntry(
@@ -1237,6 +1253,14 @@ class vavoo_config(Screen, ConfigListScreen):
             for x in self["config"].list:
                 x[1].save()
 
+            if self.old_proxy_enabled != cfg.proxy_enabled.value:
+                from .vavoo_proxy import run_proxy_in_background, shutdown_proxy
+                if cfg.proxy_enabled.value:
+                    run_proxy_in_background()
+                else:
+                    shutdown_proxy()
+                self.old_proxy_enabled = cfg.proxy_enabled.value
+
             if old_position and old_position != cfg.list_position.value:
                 self._reorganize_bouquets_position()
 
@@ -1402,26 +1426,42 @@ class MainVavoo(Screen):
             self.flag_refresh_timer.timeout.connect(
                 self.refresh_list_with_flags)
 
-        self.start_vavoo_proxy()
-        self.proxy_watchdog_timer = eTimer()
-        try:
-            self.proxy_watchdog_timer.timeout.connect(
-                self._proxy_watchdog_check)
-        except BaseException:
-            self.proxy_watchdog_timer.callback.append(
-                self._proxy_watchdog_check)
-        self.proxy_watchdog_timer.start(60000)  # Check ogni 60 secondi
+        if cfg.proxy_enabled.value:
+            self.start_vavoo_proxy()
 
-        # No need for monitor thread - proxy stays alive automatically
-        # Just check if it's ready
-        self.proxy_monitor_timer = eTimer()
-        try:
-            self.proxy_monitor_timer.timeout.connect(
-                self._check_and_update_proxy_status)
-        except BaseException:
-            self.proxy_monitor_timer.callback.append(
-                self._check_and_update_proxy_status)
-        self.proxy_monitor_timer.start(10000)  # Ogni 10 secondi
+            # Watchdog timer - check every 60 seconds
+            self.proxy_watchdog_timer = eTimer()
+            try:
+                self.proxy_watchdog_timer.timeout.connect(
+                    self._proxy_watchdog_check
+                )
+            except BaseException:
+                self.proxy_watchdog_timer.callback.append(
+                    self._proxy_watchdog_check
+                )
+
+            self.proxy_watchdog_timer.start(60000)
+
+            # Monitor timer - check proxy status every 10 seconds
+            self.proxy_monitor_timer = eTimer()
+            try:
+                self.proxy_monitor_timer.timeout.connect(
+                    self._check_and_update_proxy_status
+                )
+            except BaseException:
+                self.proxy_monitor_timer.callback.append(
+                    self._check_and_update_proxy_status
+                )
+
+            self.proxy_monitor_timer.start(10000)
+
+        else:
+            print("[MainVavoo] Proxy disabled by configuration")
+
+            # Optional: stop proxy if it is running
+            from .vavoo_proxy import shutdown_proxy
+            shutdown_proxy()
+
         self['proxy_status'].setText(_("Checking proxy..."))
         self.cat()
 
@@ -1589,6 +1629,8 @@ class MainVavoo(Screen):
     def _proxy_watchdog_check(self):
         """Watchdog per verificare se il proxy è ancora vivo"""
         try:
+            if not cfg.proxy_enabled.value:
+                return
             if not is_proxy_running():
                 print("[Watchdog] Proxy not running, attempting restart...")
                 self['proxy_status'].setText(" Restarting...")
@@ -1608,6 +1650,9 @@ class MainVavoo(Screen):
 
     def _check_and_update_proxy_status(self):
         """Check and update the proxy status periodically"""
+        if not cfg.proxy_enabled.value:
+            self['proxy_status'].setText(_("Proxy Disabled"))
+            return
         try:
             if not is_proxy_ready(timeout=2):
                 self.proxy_needs_attention = True
@@ -1628,6 +1673,9 @@ class MainVavoo(Screen):
     def _update_proxy_status_display(self):
         """Internal method to update proxy status display"""
         try:
+            if not cfg.proxy_enabled.value:
+                self['proxy_status'].setText(_("Proxy Disabled"))
+                return
             if is_proxy_running():
                 try:
                     response = getUrl(
@@ -1665,6 +1713,9 @@ class MainVavoo(Screen):
 
     def refresh_proxy(self):
         """Force proxy refresh"""
+        if not cfg.proxy_enabled.value:
+            self['name'].setText(_("Proxy disabled"))
+            return
         try:
             self.session.openWithCallback(
                 self._refresh_proxy_callback,
@@ -1713,6 +1764,8 @@ class MainVavoo(Screen):
     def start_vavoo_proxy(self):
         """Start the proxy only if it is not already running"""
         try:
+            if not cfg.proxy_enabled.value:
+                return
             if is_proxy_running():
                 print("[MainVavoo] Proxy already running")
                 return True
@@ -1756,6 +1809,9 @@ class MainVavoo(Screen):
         eDVBDB.getInstance().reloadServicelist()
 
     def cat(self):
+        if not cfg.proxy_enabled.value:
+            self['name'].setText(_("Proxy disabled"))
+            return
         self.cat_list = []
         self.items_tmp = []
 
@@ -1801,7 +1857,7 @@ class MainVavoo(Screen):
                     try:
                         country_code = get_country_code(country)
                         if country_code:
-                            success, _ = download_flag_online(
+                            success, tx = download_flag_online(
                                 country,
                                 cache_dir="/tmp/vavoo_flags",
                                 screen_width=1920
@@ -1918,6 +1974,15 @@ class MainVavoo(Screen):
 
     def show_categories_view(self):
         """Show only categories (without main countries) - SINGLE FILE EXPORT"""
+        if not cfg.proxy_enabled.value:
+            self.session.open(
+                MessageBox,
+                _("Proxy is disabled. Please enable it in the configuration."),
+                MessageBox.TYPE_WARNING,
+                timeout=5
+            )
+            return
+
         self.current_view = "categories"
         self.cat_list = []
 
@@ -1971,6 +2036,14 @@ class MainVavoo(Screen):
             # Pass ONLY the country name to the vavoo class
             # The vavoo class will handle the proxy internally
             try:
+                if not cfg.proxy_enabled.value:
+                    self.session.open(
+                        MessageBox,
+                        _("Proxy is disabled. Please Set Proxy On first. -- Menu Config --"),
+                        MessageBox.TYPE_WARNING,
+                        timeout=5)
+                    return
+
                 if not is_proxy_running():
                     self.session.open(
                         MessageBox,
@@ -2547,8 +2620,14 @@ class vavoo(Screen):
         status = {
             "ready": False,
             "message": "",
-            "needs_restart": False
+            "needs_restart": False,
+            "needs_start": False,
         }
+
+        if not cfg.proxy_enabled.value:
+            status["message"] = "Proxy disabled"
+            status["needs_start"] = True
+            return status
 
         if not is_proxy_running():
             status["message"] = "Proxy not running"
@@ -2598,6 +2677,8 @@ class vavoo(Screen):
 
     def _try_proxy_recovery(self):
         """Try to recover proxy connection"""
+        if not cfg.proxy_enabled.value:
+            return False
         try:
             print("[vavoo] Attempting proxy recovery...")
 
@@ -3251,18 +3332,26 @@ class VavooSearch(Screen):
                     continue
 
             if self.filteredList:
-                # Separa in parti senza virgolette
+                # Build message parts without embedding quotes in translations
                 part1 = _("Search:")
                 part2 = _("Found: {} channels").format(len(self.filteredList))
-                message = '{0} "{1}" - {2}'.format(part1,
-                                                   self.search_text, part2)
+
+                message = '{} "{}" - {}'.format(
+                    part1,
+                    self.search_text,
+                    part2
+                )
                 self["status"].setText(message)
             else:
-                # Separa in parti senza virgolette
+                # Build message parts without embedding quotes in translations
                 part1 = _("Search:")
                 part2 = _("No channels found")
-                message = '{0} "{1}" - {2}'.format(part1,
-                                                   self.search_text, part2)
+
+                message = '{} "{}" - {}'.format(
+                    part1,
+                    self.search_text,
+                    part2
+                )
                 self["status"].setText(message)
 
         self.updateChannelList()
@@ -3793,7 +3882,10 @@ class Playstream2(
         if self.eof_count <= 3:
             delay = 2 + (self.eof_count * 2)
             print(
-                "[Playstream2] Restarting from __evEOF in {} seconds".format(delay))
+                "[Playstream2] Restarting from __evEOF in {} seconds".format(
+                    delay
+                )
+            )
             self.restartStreamDelayed(delay * 1000)
         else:
             print("[Playstream2] Too many EOFs in __evEOF")
@@ -4236,39 +4328,20 @@ def autostart(reason, session=None, **kwargs):
         if session is not None:
             _session = session
 
-            # ONLY IF auto-update is enabled in the config
-            if cfg.autobouquetupdate.value is True:
-                print("[Vavoo] Auto-update enabled, starting services...")
+            if cfg.autobouquetupdate.value and cfg.proxy_enabled.value:
+                from .vavoo_proxy import run_proxy_in_background
 
-                # 1. Start proxy
-                try:
-                    from .vUtils import is_proxy_running
-                    from .vavoo_proxy import run_proxy_in_background
-                    if not is_proxy_running():
-                        print("[Vavoo] Starting proxy...")
-                        success = run_proxy_in_background()
-                        if success:
-                            print("[Vavoo] Proxy started successfully")
-                        else:
-                            print("[Vavoo] Failed to start proxy")
-                            return  # If proxy fails, exit
-                    else:
-                        print("[Vavoo] Proxy is already running")
+                # Start proxy in background
+                run_proxy_in_background()
 
-                except Exception as e:
-                    print("[Vavoo] Error starting proxy: " + str(e))
-                    return
-
-                # 2. Wait for the proxy to be ready (if necessary)
-                time.sleep(2)
-
-                # 3. Start AutoStartTimer
+                # Start AutoStartTimer if not already running
                 if auto_start_timer is None:
                     auto_start_timer = AutoStartTimer()
-                    print("[Vavoo] AutoStartTimer started")
-
             else:
-                print("[Vavoo] Auto-update disabled, no services started at boot")
+                print(
+                    "[Vavoo] Auto-update disabled or proxy disabled"
+                )
+
     return
 
 
@@ -4325,7 +4398,8 @@ def main(session, **kwargs):
             session.open(
                 MessageBox,
                 _("No Internet connection detected. Please check your network."),
-                MessageBox.TYPE_INFO)
+                MessageBox.TYPE_INFO
+            )
             return
         if isfile('/tmp/vavoo.log'):
             remove('/tmp/vavoo.log')

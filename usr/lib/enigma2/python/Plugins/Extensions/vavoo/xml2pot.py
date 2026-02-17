@@ -82,14 +82,19 @@ def main():
 
     # Create locale/ directory if it doesn't exist
     if not os.path.exists("locale"):
-        os.makedirs("locale")
+        try:
+            os.makedirs("locale")
+        except Exception as e:
+            print("ERROR creating 'locale' folder: %s" % e)
+            sys.exit(1)
 
-    # Write to .pot file
+    # Write to .pot file (Py2/Py3 safe)
+    import io
     try:
         # Read existing content to avoid duplicates
         existing_strings = set()
         if os.path.exists(pot_file):
-            with open(pot_file, 'r') as f:
+            with io.open(pot_file, 'r', encoding='utf-8') as f:
                 content = f.read()
                 for match in re.finditer(r'msgid "([^"]+)"', content):
                     existing_strings.add(match.group(1))
@@ -101,12 +106,12 @@ def main():
             print("\nAll strings are already present in %s" % pot_file)
             return
 
-        with open(pot_file, 'a') as f:
-            f.write('\n# Strings from setup.xml\n')
+        with io.open(pot_file, 'a', encoding='utf-8') as f:
+            f.write(u'\n# Strings from setup.xml\n')
             for text in new_strings:
-                f.write('\n')
-                f.write('msgid "%s"\n' % text.replace('"', '\\"'))
-                f.write('msgstr ""\n')
+                f.write(u'\n')
+                f.write(u'msgid "%s"\n' % text.replace('"', '\\"'))
+                f.write(u'msgstr ""\n')
 
         print("\nAdded %d new strings to: %s" % (len(new_strings), pot_file))
 

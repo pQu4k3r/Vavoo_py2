@@ -87,8 +87,7 @@ class Console(Screen):
             }, -1
         )
 
-        self.newtitle = title == 'Console' and _(
-            'Console') or title  # Fixed: Added _ function
+        self.newtitle = _('Console') if title == 'Console' else title
         self.cmdlist = isinstance(cmdlist, list) and cmdlist or [cmdlist]
         self.cancel_msg = None
         self.onShown.append(self.updateTitle)

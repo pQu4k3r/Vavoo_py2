@@ -333,7 +333,7 @@ class VavooProxy:
                             token_age = now - self.addon_sig_data["ts"]
                             # Refresh if token older than 8 minutes (480s)
                             if token_age > 480:
-                                print("[Token Monitor] Token old (" + \
+                                print("[Token Monitor] Token old (" +
                                       str(int(token_age)) + "s), refreshing...")
                                 self.refresh_addon_sig_if_needed(force=True)
 
@@ -1071,7 +1071,7 @@ class VavooHTTPHandler(BaseHTTPRequestHandler):
                     now = time.time()
                     token_age = now - proxy.addon_sig_data["ts"]
                     token_valid = proxy.addon_sig_data["sig"] is not None
-                    needs_refresh = token_age > 480  # 8 minutes
+                    needs_refresh = token_age > 300  # 8 minutes
 
                     # Calculate token expiration
                     ttl = max(0, TOKEN_ADDON_SIG - int(token_age))
@@ -1210,6 +1210,32 @@ class VavooHTTPHandler(BaseHTTPRequestHandler):
 
 
 proxy = VavooProxy()
+
+
+def shutdown_proxy():
+    """Shutdown the proxy server if running."""
+    try:
+        url = "http://127.0.0.1:{}/shutdown".format(PORT)
+        response = requests.get(url, timeout=2)
+
+        if response.status_code == 200:
+            print("[Proxy] Shutdown request sent successfully")
+            return True
+
+    except Exception as e:
+        print("[Proxy] Shutdown via HTTP failed: {}".format(e))
+
+    # Fallback: kill process
+    try:
+        import subprocess
+        subprocess.call(["pkill", "-f", "python.*vavoo_proxy"])
+        print("[Proxy] Killed by pkill")
+        return True
+
+    except Exception as e:
+        print("[Proxy] Failed to kill process: {}".format(e))
+
+    return False
 
 
 def start_proxy():
