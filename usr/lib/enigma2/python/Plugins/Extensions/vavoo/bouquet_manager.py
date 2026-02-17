@@ -35,9 +35,9 @@ from re import compile
 from sys import version_info
 
 try:
-    from urllib import unquote
-except ImportError:
     from urllib.parse import unquote
+except ImportError:
+    from urllib import unquote
 
 from enigma import eDVBDB, eTimer
 from Tools.Directories import SCOPE_PLUGINS, resolveFilename
@@ -320,7 +320,10 @@ def get_channels_from_proxy(name, export_type):
     """Get channels from the proxy"""
     try:
         import json
-        from urllib.parse import quote
+        try:
+            from urllib.parse import quote
+        except ImportError:
+            from urllib import quote
 
         # Encode the name
         encoded_name = quote(name)
@@ -659,8 +662,13 @@ def create_bouquet_file(
 
         # Write bouquet file
         try:
-            with open(bouquet_path, 'w', encoding='utf-8') as f:
-                f.write('\n'.join(content))
+            if PY3:
+                with open(bouquet_path, 'w', encoding='utf-8') as f:
+                    f.write('\n'.join(content))
+            else:
+                import codecs
+                with codecs.open(bouquet_path, 'w', encoding='utf-8') as f:
+                    f.write('\n'.join(content))
             print(
                 "[Bouquet] File created: %s (%d channels)" %
                 (bouquet_filename, channel_count))
@@ -744,8 +752,13 @@ def _create_flat_bouquet(name, url, service, bouquet_type, server_url):
 
         # Save file
         try:
-            with open(bouquet_path, 'w', encoding='utf-8') as f:
-                f.write('\n'.join(content_lines))
+            if PY3:
+                with open(bouquet_path, 'w', encoding='utf-8') as f:
+                    f.write('\n'.join(content_lines))
+            else:
+                import codecs
+                with codecs.open(bouquet_path, 'w', encoding='utf-8') as f:
+                    f.write('\n'.join(content_lines))
         except Exception as e:
             print("[bouquet_manager] Error writing with encoding: " + str(e))
             with open(bouquet_path, 'w') as f:
@@ -1016,8 +1029,13 @@ def _create_category_bouquet(
 
         # Save file
         try:
-            with open(bouquet_path, 'w', encoding='utf-8') as f:
-                f.write('\n'.join(content_lines))
+            if PY3:
+                with open(bouquet_path, 'w', encoding='utf-8') as f:
+                    f.write('\n'.join(content_lines))
+            else:
+                import codecs
+                with codecs.open(bouquet_path, 'w', encoding='utf-8') as f:
+                    f.write('\n'.join(content_lines))
         except Exception as e:
             print("[bouquet_manager] Error writing with encoding: " + str(e))
             with open(bouquet_path, 'w') as f:
